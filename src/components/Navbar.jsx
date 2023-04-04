@@ -20,8 +20,8 @@ const Navbar = () => {
   }, 0);
 
   return (
-    <div className="navbar h-10 bg-white shadow-xl sticky top-0 z-50">
-      <div className="navbar-start flex items-center justify-between flex-wrap p-10">
+    <div className="navbar h-10 bg-white shadow-xl sticky top-0 z-50 ">
+      <div className="navbar-start flex items-center justify-between flex-wrap space-x-6 m-10 hidden md:table-cell">
         <div className="dropdown dropdown-end ">
           <label tabIndex={0} className="btn btn-ghost btn-circle ">
             <div className="flex flex-row items-center ">
@@ -186,17 +186,17 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="navbar-end mr-10">
-        <div className="flex justify-between">
+        <div className="flex justify-between hidden md:table-cell">
           <label tabIndex={0} className="btn btn-ghost btn-circle">
             <FiSearch calor="black" size={22} />
           </label>
         </div>
-        <div className="flex justify-between mx-2">
+        <div className="flex justify-between mx-2 hidden md:table-cell">
           <label tabIndex={0} className="btn btn-ghost btn-circle">
             <CgProfile color="black" size={22} />
           </label>
         </div>
-        <div className="flex justify-between mx-2">
+        <div className="flex justify-between mx-2 hidden md:table-cell">
           <label tabIndex={0} className="btn btn-ghost btn-circle">
             <AiFillStar color="black" size={22} />
           </label>
@@ -226,7 +226,7 @@ const Navbar = () => {
                 return (
                   <div className="card lg:card-side " key={index}>
                     <figure>
-                      <img src={item.image} alt="Album" className="w-32" />
+                      <img src={item.image} alt="Album" className="w-32 h-32" />
                     </figure>
                     <div className="card-body ">
                       <h2 className="text-lg">{item.title}</h2>
@@ -295,124 +295,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-// import { useState } from "react";
-// import {
-//   FiSearch,
-//   CgProfile,
-//   AiFillStar,
-//   BiShoppingBag,
-// } from "react-icons/all";
-// import { Link } from "react-router-dom";
-
-// function Navbar() {
-//   const [isOpen, setIsOpen] = useState(false);
-
-//   const toggleMenu = () => {
-//     setIsOpen(!isOpen);
-//   };
-
-//   return (
-//     <nav className="bg-white shadow-lg">
-//       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-//         <div className="flex justify-between h-16">
-//           <div className="flex-shrink-0 flex items-center">
-//             <Link to="/" className="text-black font-bold text-xl">
-//               Store App
-//             </Link>
-//           </div>
-//           <div className="hidden md:block">
-//             <div className="ml-10 flex items-baseline space-x-4">
-//               <Link to="/" className="btn btn-ghost">
-//                 Home
-//               </Link>
-//               <Link to="/about" className="btn btn-ghost">
-//                 About
-//               </Link>
-//               <Link to="/contact" className="btn btn-ghost">
-//                 Contact
-//               </Link>
-//             </div>
-//           </div>
-//           <div className="-mr-2 flex md:hidden">
-//             <button
-//               type="button"
-//               className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-black hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-//               aria-controls="mobile-menu"
-//               aria-expanded="false"
-//               onClick={toggleMenu}
-//             >
-//               <span className="sr-only">Open main menu</span>
-//               <svg
-//                 className={`${isOpen ? "hidden" : "block"} h-6 w-6`}
-//                 xmlns="http://www.w3.org/2000/svg"
-//                 fill="none"
-//                 viewBox="0 0 24 24"
-//                 stroke="currentColor"
-//                 aria-hidden="true"
-//               >
-//                 <path
-//                   strokeLinecap="round"
-//                   strokeLinejoin="round"
-//                   strokeWidth={2}
-//                   d="M4 6h16M4 12h16M4 18h16"
-//                 />
-//               </svg>
-//               <svg
-//                 className={`${isOpen ? "block" : "hidden"} h-6 w-6`}
-//                 xmlns="http://www.w3.org/2000/svg"
-//                 fill="none"
-//                 viewBox="0 0 24 24"
-//                 stroke="currentColor"
-//                 aria-hidden="true"
-//               >
-//                 <path
-//                   strokeLinecap="round"
-//                   strokeLinejoin="round"
-//                   strokeWidth={2}
-//                   d="M6 18L18 6M6 6l12 12"
-//                 />
-//               </svg>
-//             </button>
-//           </div>
-//         </div>
-//       </div>
-//       <div
-//         className={`${isOpen ? "block" : "hidden"} md:hidden`}
-//         id="mobile-menu"
-//       >
-//         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-//           <Link to="/" className="btn btn-ghost block">
-//             Home
-//           </Link>
-//           <Link to="/about" className="btn btn-ghost block">
-//             About
-//           </Link>
-//           <Link to="/contact" className="btn btn-ghost block">
-//             Contact
-//           </Link>
-//         </div>
-//       </div>
-//       <div className="hidden md:block">
-//         <div className="flex justify-end mr-10">
-//           <div className="flex justify-between">
-//             <label tabIndex={0} className="btn btn-ghost btn-circle">
-//               <FiSearch color="black" size={22} />
-//             </label>
-//             <label tabIndex={0} className="btn btn-ghost btn-circle">
-//               <CgProfile color="black" size={22} />
-//             </label>
-//             <label tabIndex={0} className="btn btn-ghost btn-circle">
-//               <AiFillStar color="black" size={22} />
-//             </label>
-//             <label tabIndex={0} className="btn btn-ghost btn-circle">
-//               <BiShoppingBag color="black" size={22} />
-//             </label>
-//           </div>
-//         </div>
-//       </div>
-//     </nav>
-//   );
-// }
-
-// export default Navbar;

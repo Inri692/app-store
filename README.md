@@ -17,7 +17,6 @@ app-store is a useful website for online shopping.</h2>
 - [Axios](https://axios-http.com/)
 - [React-router-dom](https://reactrouter.com/)
 - [React-cookie](https://www.npmjs.com/package/react-cookie)
-- [Sweetalert2](https://sweetalert2.github.io/)
 - [Vercel](https://vercel.com/)
 
 ## 🧰 Installation

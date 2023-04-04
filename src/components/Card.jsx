@@ -1,11 +1,5 @@
 import React from "react";
-export const CardProduct1 = ({
-  title,
-  price,
-
-  image,
-  onClickDetail,
-}) => {
+export const CardProduct1 = ({ title, price, image, onClickDetail }) => {
   return (
     <div className="card w-96 bg-base-100 shadow-md " onClick={onClickDetail}>
       <figure className="px-10 pt-10">
@@ -27,70 +21,39 @@ export const CardProduct1 = ({
   );
 };
 
-export const CardProduct2 = ({}) => {
+export const CardProduct2 = ({ title, image, description }) => {
   return (
-    <div className="card w-96 bg-base-100 shadow-xl mt-5">
+    <div className="card w-96 bg-base-100 mt-5">
       <figure>
-        <img
-          src="https://img.freepik.com/free-photo/black-friday-elements-assortment_23-2149074075.jpg"
-          alt="Shoes"
-          className="w-full"
-        />
+        <img src={image} alt="Shoes" className="w-48 h-48" />
       </figure>
       <div className="card-body">
-        <h2 className="card-title">Shoes!</h2>
-        <p>If a dog chews shoes whose shoes does he choose?</p>
+        <h2 className="card-title">{title}</h2>
+        <p>{description}</p>
       </div>
     </div>
   );
 };
 
-// export const CardProduct3 = ({}) => {
-//   return (
-//     <div className="card lg:card-side w-1/2 bg-base-100 shadow-xl mx-20">
-//       <figure>
-//         <img
-//           src="https://img.freepik.com/free-photo/black-friday-elements-assortment_23-2149074075.jpg"
-//           alt="Album"
-//         />
-//       </figure>
-//       <div className="card-body pt-10">
-//         <h2 className="card-title">New album is released!</h2>
-//         <p>Click the button to listen on Spotiwhy app.</p>
-//         <div className="card-actions justify-start">
-//           <h1 className="underline">SHOP NOW</h1>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-export const CardProduct4 = ({}) => {
+export const CardProduct4 = ({ title, image, price }) => {
   return (
-    <div className="card w-96 bg-[#f1f5f9] mx-20">
+    <div className="card w-96 bg-[#f1f5f9] mx-3 pt-10">
       <figure className="w-full">
-        <img
-          src="https://asset.kompas.com/crops/PdKQ8JEec1uH477e64QGdeYVWWI=/28x0:612x389/750x500/data/photo/2021/03/29/6061aaa779b88.png"
-          alt="Shoes"
-          className="rounded-xl"
-        />
+        <img src={image} alt="Shoes" className="w-48 h-48" />
       </figure>
       <div className="card-body items-center text-center">
-        <h2 className="card-title">Nama Barang</h2>
-        <h1 className="font-bold text-2xl">$1.23</h1>
+        <h2 className="card-title">{title}</h2>
+        <h1 className="font-bold text-2xl">$ {price}</h1>
       </div>
     </div>
   );
 };
 
-export const CardProduct5 = ({}) => {
+export const CardProduct5 = ({ image }) => {
   return (
     <div className="card w-96 ">
-      <figure className="px-10 pt-10">
-        <img
-          src="https://asset.kompas.com/crops/PdKQ8JEec1uH477e64QGdeYVWWI=/28x0:612x389/750x500/data/photo/2021/03/29/6061aaa779b88.png"
-          alt="Shoes"
-          className="rounded-xl"
-        />
+      <figure className="px-5 pt-10">
+        <img src={image} alt="Shoes" className="w-48 h-48" />
       </figure>
     </div>
   );

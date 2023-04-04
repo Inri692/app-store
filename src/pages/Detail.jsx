@@ -62,11 +62,14 @@ const Detail = () => {
                   >
                     ADD TO CART
                   </button>
-                  <button className="btn  bg-black text-white w-full h-10 rounded-lg mt-5">
+                  <button
+                    className="btn  bg-black text-white w-full h-10 rounded-lg mt-5"
+                    onClick={() => dispatch({ type: "ADD", payload: products })}
+                  >
                     Buy it now
                   </button>
                 </div>
-                <div className="flex flex-row mt-10">
+                <div className="flex sm:flex-row mt-10">
                   <button className="flex flex-row gap-2">
                     <BsArrowDownUp className="mt-1 mx-2" />
                     Compare
