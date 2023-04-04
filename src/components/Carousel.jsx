@@ -1,8 +1,9 @@
 import React from "react";
+import { TbPoint } from "react-icons/tb";
 
 const Carousel = () => {
   return (
-    <div className="h-5/6 w-full">
+    <div className="h-5/6 w-full bg-cover">
       <div className="relative h-full w-full overflow-hidden">
         <div id="item1" className="carousel-item w-full relative">
           <img
@@ -65,18 +66,30 @@ const Carousel = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-center w-full py-2 gap-2 top relative ">
-        <a href="#item1" className="btn btn-xs hidden md:table-cell">
-          1
+      <div className="flex justify-center w-full pt-3 gap-2 top relative ">
+        <a
+          href="#item1"
+          className="btn btn-xs rounded-full hidden md:table-cell  "
+        >
+          <TbPoint className="mt-1" />
         </a>
-        <a href="#item2" className="btn btn-xs hidden md:table-cell">
-          2
+        <a
+          href="#item2"
+          className="btn btn-xs rounded-full hidden md:table-cell"
+        >
+          <TbPoint className="mt-1" />
         </a>
-        <a href="#item3" className="btn btn-xs hidden md:table-cell">
-          3
+        <a
+          href="#item3"
+          className="btn btn-xs rounded-full hidden md:table-cell"
+        >
+          <TbPoint className="mt-1" />
         </a>
-        <a href="#item4" className="btn btn-xs hidden md:table-cell">
-          4
+        <a
+          href="#item4"
+          className="btn btn-xs rounded-full hidden md:table-cell"
+        >
+          <TbPoint className="mt-1" />
         </a>
       </div>
     </div>
