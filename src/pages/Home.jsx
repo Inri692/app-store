@@ -1,5 +1,6 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 import Layout from "../components/Layout";
 import Carousel from "../components/Carousel";
@@ -12,6 +13,23 @@ import {
 import Footer from "../components/Footer";
 
 const Home = () => {
+  const [products, setProduct] = useState([]);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  function fetchData() {
+    axios
+      .get("https://fakestoreapi.com/products?limit=4")
+      .then((response) => setProduct(response.data));
+  }
+
+  function onClickDetail(id) {
+    navigate(`/detail/${id}`);
+  }
+
   return (
     <Layout>
       <Carousel />
@@ -19,9 +37,16 @@ const Home = () => {
         <h1 className="text-3xl font-bold"> Our Best Seller</h1>
       </div>
       <div className="grid grid-cols-4 gap-4 ">
-        <Link to="/detail/:id">
-          <CardProduct1 />
-        </Link>
+        {products.map((product) => (
+          <CardProduct1
+            key={product.id}
+            title={product.title}
+            price={product.price}
+            image={product.image}
+            onClickDetail={() => onClickDetail(product.id)}
+            onclick={() => addToCart(product.id)}
+          />
+        ))}
       </div>
       <div className="mx-20 my-10">
         <h1 className="text-3xl font-bold">
@@ -34,7 +59,7 @@ const Home = () => {
       </div>
 
       <div className="p-20">
-        <div className="grid grid-cols-2 gap-5">
+        <div className="grid grid-cols-2 gap-5 lg:grid-rows-1">
           <div className="card lg:card-side w-full bg-white ">
             <figure>
               <img
@@ -70,8 +95,8 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="mt-20 grid grid-cols-4 gap-4 bg-[#f1f5f9]">
-        <div className="mx-20 my-20 w-full">
+      <div className="mt-20 grid grid-cols-4 gap-4 bg-[#f1f5f9] lg:grid-grid-rows ">
+        <div className="mx-20 my-20 w-full ">
           <h1 className="text-4xl">Shot Bundles</h1>
           <p className="text-lg pt-5">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.{" "}

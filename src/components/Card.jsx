@@ -1,17 +1,27 @@
 import React from "react";
-export const CardProduct1 = ({}) => {
+export const CardProduct1 = ({
+  title,
+  price,
+
+  image,
+  onClickDetail,
+}) => {
   return (
-    <div className="card w-96 bg-base-100 shadow-md mx-20">
+    <div className="card w-96 bg-base-100 shadow-md " onClick={onClickDetail}>
       <figure className="px-10 pt-10">
         <img
-          src="https://asset.kompas.com/crops/PdKQ8JEec1uH477e64QGdeYVWWI=/28x0:612x389/750x500/data/photo/2021/03/29/6061aaa779b88.png"
+          src={image}
           alt="Shoes"
-          className="rounded-xl"
+          className="rounded-xl w-48 h-48"
+          onClick={onClickDetail}
         />
       </figure>
-      <div className="card-body items-center text-center">
-        <h2 className="card-title">Nama Barang</h2>
-        <h1 className="font-bold text-2xl">$1.23</h1>
+      <div
+        className="card-body items-center text-center"
+        onClick={onClickDetail}
+      >
+        <h2 className="card-title gap-5">{title}</h2>
+        <h1 className="font-bold text-2xl">$ {price}</h1>
       </div>
     </div>
   );

@@ -1,12 +1,13 @@
 ## 📑 About the Project
 
 <h2 align="center">
-This website displays user data</h2>
+app-store is a useful website for online shopping.</h2>
 
 ## 🔮 Features
 
-- Register/Login
-- Dashboard User
+- Home Page
+- Detail Page
+- Cart Page
 
 ## 🛠️ Built With
 
@@ -24,7 +25,7 @@ This website displays user data</h2>
 1. Clone repo:
 
 ```sh
-   git clone https://github.com/Inri692/test-sanberhub
+   git clone https://github.com/Inri692/app-store
 ```
 
 2. Install package

@@ -2,14 +2,14 @@ import React from "react";
 
 const Carousel = () => {
   return (
-    <div className="h-4/5 w-full">
+    <div className="h-5/6 w-full">
       <div className="relative h-full w-full overflow-hidden">
         <div id="item1" className="carousel-item w-full relative">
           <img
             src="https://img.freepik.com/free-photo/asian-happy-female-woman-girl-holds-colourful-shopping-packages-standing-yellow-background-studio-shot-close-up-portrait-young-beautiful-attractive-girl-smiling-looking-camera-with-bags_609648-3029.jpg?size=626&ext=jpg&ga=GA1.2.1428796754.1680492591&semt=sph"
             className="w-full"
           />
-          <div className="absolute top-0 left-0 p-32 ">
+          <div className="absolute top-0 left-0 p-32 md:bottom-0">
             <h1 className="font-bold text-5xl "> Buy and happines</h1>
             <p className="w-96 h-32 font-normal text-lg pt-5">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -19,7 +19,10 @@ const Carousel = () => {
             </button>
           </div>
         </div>
-        <div id="item2" className="carousel-item w-full relative">
+        <div
+          id="item2"
+          className="carousel-item w-full relative hidden md:block"
+        >
           <img
             src="https://img.freepik.com/free-photo/studio-shot-pretty-black-woman-with-white-shopping-bag-standing-yellow-background-trendy-spring-fashionable-look_273443-10.jpg"
             className="w-full"
@@ -34,7 +37,10 @@ const Carousel = () => {
             </button>
           </div>
         </div>
-        <div id="item3" className="carousel-item w-full relative">
+        <div
+          id="item3"
+          className="carousel-item w-full relative hidden md:block"
+        >
           <img
             src="https://img.freepik.com/free-photo/black-friday-elements-assortment_23-2149074076.jpg?w=2000"
             className="w-full"
@@ -49,7 +55,10 @@ const Carousel = () => {
             </button>
           </div>
         </div>
-        <div id="item4" className="carousel-item w-full relative">
+        <div
+          id="item4"
+          className="carousel-item w-full relative hidden md:block"
+        >
           <img
             src="https://img.freepik.com/free-photo/black-friday-elements-assortment_23-2149074075.jpg"
             className="w-full"

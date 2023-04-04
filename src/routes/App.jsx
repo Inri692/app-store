@@ -3,7 +3,6 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import Home from "../pages/Home";
 import Detail from "../pages/Detail";
-import Card from "../pages/Cart";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -14,10 +13,6 @@ const App = () => {
     {
       path: "/detail/:id",
       element: <Detail />,
-    },
-    {
-      path: "/card",
-      element: <Card />,
     },
   ]);
   return <RouterProvider router={router} />;
